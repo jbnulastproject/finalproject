@@ -1,0 +1,25 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 글 생성-->
+        <form action="{% url 'create' %}">
+            <h4>제목: </h4>
+            <input type="text" name="title">
+            <br>
+            <h4>내용: </h4>
+            <textarea cols=40 rows=10 name="contents"></textarea>
+            <br>
+            <input class="btn btn-dark" type="submit" value="제출하기">
+        </form>
+    </div>
+</body>
+
+</html>

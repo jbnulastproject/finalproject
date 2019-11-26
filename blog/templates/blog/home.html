@@ -1,0 +1,23 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    {% for blog in blogs.all %}
+    <div class="container">
+        <h1>{{ blog.title}}</h1>
+        <p>{{blog.pub_date}}</p>
+        <!--100글자로 출력 , 더보기 버튼을 누르면 디테일페이지로 넘어감-->
+        <p>{{blog.summary}}<a href="{% url 'detail' blog.id %}">...더보기</a></p>
+    </div>
+    {% endfor %}
+    <!-- 글 작성하기 버튼 누르면 포스트 페이지로 넘어감-->
+    <p><a href="{% url 'post' %}">글 작성하기</a></p>
+</body>
+
+</html>
